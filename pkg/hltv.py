@@ -76,12 +76,6 @@ def get_players(teamid):
     return players
 
 def get_player_info(player_id):
-    """
-    :param player_id: integer (or string consisting of integers)
-    :return: dictionary of player
-
-    example player id: 7398 (dupreeh)
-    """
 
     page = get_parsed_page(f"https://www.hltv.org/stats/players/{player_id}/a")
     statistics = page.find("div", {"class": "statistics"}).find_all("div", {"class": "stats-row"})
